@@ -9,33 +9,35 @@ public static class Utilities
         //determine if input is num or string, return word if string return number if num.
 
 
-        float number;
-        int counter = 0;
-        int SIZE = input.Length;
+      //  float number;
+       // int counter = 0;
+       // int SIZE = input.Length;
 
-        char[] characters = new char[SIZE]; 
+        //char[] characters = new char[SIZE]; 
         
 
-       // foreach (char c in input) {
+        foreach (char c in input) {
          //   characters = input[counter];
             
-            if (float.TryParse(input, out number)) 
+            if (char.IsLetter(c)) 
             {
             // float numbers[] = 
             //  foreach (float)
 
-            counter++;
-                return ($"{input} is a number");
+           // counter++;
+                return ($"{c} is a string");
             }
             else
             {
 
-                return ($"{input} is a string");
+                return ($"{c} is a number");
             }
-        //}
+
+        }
+        return "d";
 
 
-    } 
+    }
 
-   
+
 }
