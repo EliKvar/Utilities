@@ -19,7 +19,8 @@ public class InputManager : MonoBehaviour
 
     public void EnterPressed()
     {
-        outText.text  =Utilities.ProcessText(textIn.text);
+        //outText.text  =Utilities.ProcessText(textIn.text);
+        outText.text = Utilities.AverageChars(textIn.text);
 
     }
 

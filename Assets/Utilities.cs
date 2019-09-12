@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,7 +15,7 @@ public static class Utilities
 
         //char[] characters = new char[SIZE]; 
 
-
+            
         foreach (char c in input)
         {
             //   characters = input[counter];
@@ -37,6 +37,26 @@ public static class Utilities
         }
         return "d";
 
+
+    }
+
+    public static string AverageChars(string input)
+    {
+        int len = 0;
+        int count = 0;
+        string[] words = input.Split();
+
+        foreach (var word in words)
+        {
+            len += word.Length;
+
+
+            count++;
+            Debug.Log("Num of words: "+count+ " Length: " + len);     
+                
+          }
+
+        return (len/count).ToString();
 
     }
 }
