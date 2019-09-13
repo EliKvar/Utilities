@@ -53,7 +53,15 @@ public class Hero : MonoBehaviour {
         {
             fireDelegate();
         }
-	}
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            speed += 20;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            speed -= 20;
+        }
+    }
 
     public float shieldLevel
     {

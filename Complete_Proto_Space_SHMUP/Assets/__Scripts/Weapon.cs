@@ -25,7 +25,7 @@ public class Weapon : MonoBehaviour {
         public Color projectileColor = Color.white;
         public float damageOnHit = 10;
         public float continuousDamage = 0; //laser has dps
-        public float delayBetweenShots = 0.2f;
+        public float delayBetweenShots = 0.0f;
         public float velocity = 20;
     }
 
@@ -35,6 +35,8 @@ public class Weapon : MonoBehaviour {
     public GameObject collar;
     public float lastShotTime; //last time shot was fired
     private Renderer collarRend;
+
+
 
 	
 	void Start () {
@@ -71,10 +73,10 @@ public class Weapon : MonoBehaviour {
         if (!gameObject.activeInHierarchy) return;
         //if enough time hasn't passed between shots, return
 
-        if (Time.time - lastShotTime < def.delayBetweenShots)
-        {
-            return;
-        }
+      //  if (Time.time - lastShotTime < def.delayBetweenShots)
+       // {
+      //      return;
+       // }
         Projectile p;
         Vector3 vel = Vector3.up * def.velocity;
         if(transform.up.y<0)
@@ -85,7 +87,8 @@ public class Weapon : MonoBehaviour {
         {
             case WeaponType.blaster:
                 p = MakeProjectile();
-                p.rigid.velocity = vel;
+                p.transform.rotation = Quaternion.AngleAxis( Mathf.Sin(Time.time * 20) * 10, Vector3.back);
+                p.rigid.velocity = p.transform.rotation * vel;
                 break;
 
             case WeaponType.spread:
