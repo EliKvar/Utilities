@@ -105,3 +105,13 @@ class RenFairePerson : Person
 //-----------------------------------------------------------------
 //Chapter 23 Unity API
 //-----------------------------------------------------------------
+//Method for finding an objects location based on time is Lerp()
+Vector3 result = Vector3.Lerp(start, end, .5f);
+bullet.position = Vector3.Lerp(startPosition, endPosition, currentTime)
+//Lerp() moves in a straight line, Slerp() moves along a curve(takes magnitude into account)
+//Rotation: localRotation is the rotation of the GameObject relative to the parent object, rotation is relative to the world
+//transform.up/forward/right
+//eulerAngles allows us to see the angle in values we know
+Quaternion objectRotation = Quaternion.identity; 
+    objectRotation.eulerAngles = new Vector3(90, 0, 0);
+//Changes regarding to physics should occur in FixedUpdate()
