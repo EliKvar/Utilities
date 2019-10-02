@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ce64c9792d4ce214eaf1424fdcbced43
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - shootSound: {instanceID: 0}
+  - towerPieceToAim: {instanceID: 0}
+  - targetEnemy: {instanceID: 0}
+  - stonePrefab: {fileID: 1000012378032816, guid: ea3db759f8d834de0a42a0c7c78b8461,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
